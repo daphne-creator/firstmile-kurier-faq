@@ -260,6 +260,28 @@
     box-shadow: var(--shadow);
   }
   .qa-img-cap { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+  .qa-img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+    gap: 10px;
+    margin: 12px 0 4px;
+  }
+  .qa-img-grid .qa-img-wrap { margin: 0; }
+  .qa-img-grid .qa-img { border-radius: 10px; }
+  .qa-img-grid .qa-img-cap { font-size: 11px; }
+  .qa-img-step {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-contrast);
+    background: var(--accent);
+    border-radius: 999px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    margin-right: 4px;
+  }
   .no-results { text-align: center; padding: 60px 20px; color: var(--text-muted); }
   .no-results[hidden] { display: none; }
   footer {
@@ -322,7 +344,17 @@
                         <li>Tetapkan <strong>kata laluan baharu</strong> (8-20 aksara, mengandungi huruf besar, huruf kecil, nombor &amp; aksara khas) &mdash; klik OK.</li>
                         <li>Selepas kata laluan disimpan, log masuk semula menggunakan kata laluan baharu tersebut.</li>
                       </ol>
-                      <div class="qa-img-wrap"><img class="qa-img" src="images/login.jpg" alt="Skrin log masuk Driver App dengan pengesahan OTP WhatsApp" loading="lazy"><p class="qa-img-cap">Pengesahan OTP melalui WhatsApp semasa log masuk</p></div>` },
+                      <div class="qa-img-grid">
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-1.jpg" alt="Imbas QR code untuk muat turun aplikasi SPX" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">1</span>Imbas QR / muat turun app</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-2.jpg" alt="Buka aplikasi SPX dan pilih Log In" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">2</span>Buka app & pilih Log In</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-3.jpg" alt="Masukkan nombor telefon dan klik Next" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">3</span>Masukkan nombor telefon</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-4.jpg" alt="Masukkan kod pengesahan captcha" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">4</span>Masukkan kod pengesahan (captcha)</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-5.jpg" alt="Sahkan kaedah OTP melalui WhatsApp" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">5</span>Sahkan OTP melalui WhatsApp</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-6.jpg" alt="Kod OTP diterima melalui WhatsApp" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">6</span>Terima kod OTP di WhatsApp</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-7.jpg" alt="Masukkan kod OTP 6 digit" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">7</span>Masukkan kod OTP 6 digit</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-8.jpg" alt="Tetapkan kata laluan baharu" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">8</span>Tetapkan kata laluan baharu</p></div>
+                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-9.jpg" alt="Kata laluan berjaya ditetapkan" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">9</span>Kata laluan berjaya ditetapkan</p></div>
+                      </div>` },
         { q: `Bolehkah kurier kongsi ID atau kata laluan Driver App dengan orang lain?`, a: `<p><strong>Tidak, sama sekali dilarang.</strong> Kurier tidak dibenarkan berkongsi atau memberi akses ID mereka kepada sesiapa pun.</p>
                       <p>Sebarang perkongsian butiran log masuk boleh dikenakan tindakan tatatertib &mdash; sehingga dan termasuk <strong>penamatan perkhidmatan</strong>.</p>
                       <div class="qa-img-wrap"><img class="qa-img" src="images/id-warning.jpg" alt="Amaran dilarang berkongsi ID atau kata laluan" loading="lazy"><p class="qa-img-cap">Dilarang berkongsi ID atau kata laluan</p></div>` },
