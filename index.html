@@ -260,14 +260,15 @@
     box-shadow: var(--shadow);
   }
   .qa-img-cap { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+  .qa-img-wide { max-width: 420px; }
   .qa-img-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
     gap: 10px;
     margin: 12px 0 4px;
   }
-  .qa-img-grid .qa-img-wrap { margin: 0; }
-  .qa-img-grid .qa-img { border-radius: 10px; }
+  .qa-img-grid .qa-img-wrap { margin: 0; position: relative; }
+  .qa-img-grid .qa-img { border-radius: 10px; display: block; }
   .qa-img-grid .qa-img-cap { font-size: 11px; }
   .qa-img-step {
     display: inline-block;
@@ -281,6 +282,14 @@
     line-height: 16px;
     text-align: center;
     margin-right: 4px;
+    flex: none;
+  }
+  .qa-img-grid .qa-img-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.4);
+    margin-right: 0;
   }
   .no-results { text-align: center; padding: 60px 20px; color: var(--text-muted); }
   .no-results[hidden] { display: none; }
@@ -347,17 +356,17 @@
                       <div class="qa-img-grid">
                         <div class="qa-img-wrap"><img class="qa-img" src="images/login-1.jpg" alt="Imbas QR code untuk muat turun aplikasi SPX" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">1</span>Imbas QR / muat turun app</p></div>
                         <div class="qa-img-wrap"><img class="qa-img" src="images/login-2.jpg" alt="Buka aplikasi SPX dan pilih Log In" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">2</span>Buka app & pilih Log In</p></div>
-                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-3.jpg" alt="Masukkan nombor telefon dan klik Next" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">3</span>Masukkan nombor telefon</p></div>
-                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-4.jpg" alt="Masukkan kod pengesahan captcha" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">4</span>Masukkan kod pengesahan (captcha)</p></div>
-                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-5.jpg" alt="Sahkan kaedah OTP melalui WhatsApp" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">5</span>Sahkan OTP melalui WhatsApp</p></div>
-                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-6.jpg" alt="Kod OTP diterima melalui WhatsApp" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">6</span>Terima kod OTP di WhatsApp</p></div>
-                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-7.jpg" alt="Masukkan kod OTP 6 digit" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">7</span>Masukkan kod OTP 6 digit</p></div>
-                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-8.jpg" alt="Tetapkan kata laluan baharu" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">8</span>Tetapkan kata laluan baharu</p></div>
-                        <div class="qa-img-wrap"><img class="qa-img" src="images/login-9.jpg" alt="Kata laluan berjaya ditetapkan" loading="lazy"><p class="qa-img-cap"><span class="qa-img-step">9</span>Kata laluan berjaya ditetapkan</p></div>
+                        <div class="qa-img-wrap"><span class="qa-img-step qa-img-badge">3</span><img class="qa-img" src="images/login-3.jpg" alt="Daftar nombor telefon untuk ID pengguna (tanpa 0)" loading="lazy"></div>
+                        <div class="qa-img-wrap"><span class="qa-img-step qa-img-badge">4</span><img class="qa-img" src="images/login-4.jpg" alt="Sila masukkan kod pengesahan (captcha) yang dipaparkan" loading="lazy"></div>
+                        <div class="qa-img-wrap"><span class="qa-img-step qa-img-badge">5</span><img class="qa-img" src="images/login-5.jpg" alt="Pastikan WhatsApp dipilih sebagai medium untuk menerima OTP" loading="lazy"></div>
+                        <div class="qa-img-wrap"><span class="qa-img-step qa-img-badge">6</span><img class="qa-img" src="images/login-6.jpg" alt="Masukkan OTP yang diterima melalui WhatsApp dan klik OK" loading="lazy"></div>
+                        <div class="qa-img-wrap"><span class="qa-img-step qa-img-badge">7</span><img class="qa-img" src="images/login-7.jpg" alt="Sebaik sahaja OTP disahkan, tetapkan kata laluan baharu" loading="lazy"></div>
+                        <div class="qa-img-wrap"><span class="qa-img-step qa-img-badge">8</span><img class="qa-img" src="images/login-8.jpg" alt="Tetapkan kata laluan mengikut kriteria yang diperlukan" loading="lazy"></div>
+                        <div class="qa-img-wrap"><span class="qa-img-step qa-img-badge">9</span><img class="qa-img" src="images/login-9.jpg" alt="Sebaik sahaja kata laluan disimpan, log masuk semula" loading="lazy"></div>
                       </div>` },
         { q: `Bolehkah kurier kongsi ID atau kata laluan Driver App dengan orang lain?`, a: `<p><strong>Tidak, sama sekali dilarang.</strong> Kurier tidak dibenarkan berkongsi atau memberi akses ID mereka kepada sesiapa pun.</p>
                       <p>Sebarang perkongsian butiran log masuk boleh dikenakan tindakan tatatertib &mdash; sehingga dan termasuk <strong>penamatan perkhidmatan</strong>.</p>
-                      <div class="qa-img-wrap"><img class="qa-img" src="images/id-warning.jpg" alt="Amaran dilarang berkongsi ID atau kata laluan" loading="lazy"><p class="qa-img-cap">Dilarang berkongsi ID atau kata laluan</p></div>` },
+                      <div class="qa-img-wrap"><img class="qa-img qa-img-wide" src="images/id-warning.jpg" alt="Amaran: Dilarang berkongsi ID. Pemandu tidak dibenarkan berkongsi atau memberi akses ID mereka kepada orang lain." loading="lazy"></div>` },
         { q: `Adakah kurier FM wajib rakam waktu masuk (clock-in)?`, a: `<p>Ya. Pemandu diwajibkan untuk merakam waktu masuk (clock-in) di dalam app &mdash; sama ada di rumah atau semasa menghidupkan kenderaan &mdash; sebagai tanda pemandu melapor diri untuk bertugas pada hari tersebut.</p>
                       <p>Penyelia akan memantau kehadiran pemandu bagi setiap syif dan pasukan masing-masing.</p>
                       <div class="qa-img-wrap"><img class="qa-img" src="images/clock-in.jpg" alt="Skrin clock-in Enter/Exit dalam Driver App" loading="lazy"><p class="qa-img-cap">Skrin rakam waktu masuk (clock-in) dalam app</p></div>` }
