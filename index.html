@@ -250,6 +250,16 @@
     background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 8px;
     padding: 10px 12px; margin: 10px 0; font-size: 13.5px;
   }
+  .qa-img-wrap { margin: 12px 0 4px; }
+  .qa-img {
+    display: block;
+    max-width: 240px;
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .qa-img-cap { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
   .no-results { text-align: center; padding: 60px 20px; color: var(--text-muted); }
   .no-results[hidden] { display: none; }
   footer {
@@ -311,11 +321,14 @@
                         <li>Masukkan kod OTP 6 digit yang diterima melalui WhatsApp.</li>
                         <li>Tetapkan <strong>kata laluan baharu</strong> (8-20 aksara, mengandungi huruf besar, huruf kecil, nombor &amp; aksara khas) &mdash; klik OK.</li>
                         <li>Selepas kata laluan disimpan, log masuk semula menggunakan kata laluan baharu tersebut.</li>
-                      </ol>` },
+                      </ol>
+                      <div class="qa-img-wrap"><img class="qa-img" src="images/login.jpg" alt="Skrin log masuk Driver App dengan pengesahan OTP WhatsApp" loading="lazy"><p class="qa-img-cap">Pengesahan OTP melalui WhatsApp semasa log masuk</p></div>` },
         { q: `Bolehkah kurier kongsi ID atau kata laluan Driver App dengan orang lain?`, a: `<p><strong>Tidak, sama sekali dilarang.</strong> Kurier tidak dibenarkan berkongsi atau memberi akses ID mereka kepada sesiapa pun.</p>
-                      <p>Sebarang perkongsian butiran log masuk boleh dikenakan tindakan tatatertib &mdash; sehingga dan termasuk <strong>penamatan perkhidmatan</strong>.</p>` },
+                      <p>Sebarang perkongsian butiran log masuk boleh dikenakan tindakan tatatertib &mdash; sehingga dan termasuk <strong>penamatan perkhidmatan</strong>.</p>
+                      <div class="qa-img-wrap"><img class="qa-img" src="images/id-warning.jpg" alt="Amaran dilarang berkongsi ID atau kata laluan" loading="lazy"><p class="qa-img-cap">Dilarang berkongsi ID atau kata laluan</p></div>` },
         { q: `Adakah kurier FM wajib rakam waktu masuk (clock-in)?`, a: `<p>Ya. Pemandu diwajibkan untuk merakam waktu masuk (clock-in) di dalam app &mdash; sama ada di rumah atau semasa menghidupkan kenderaan &mdash; sebagai tanda pemandu melapor diri untuk bertugas pada hari tersebut.</p>
-                      <p>Penyelia akan memantau kehadiran pemandu bagi setiap syif dan pasukan masing-masing.</p>` }
+                      <p>Penyelia akan memantau kehadiran pemandu bagi setiap syif dan pasukan masing-masing.</p>
+                      <div class="qa-img-wrap"><img class="qa-img" src="images/clock-in.jpg" alt="Skrin clock-in Enter/Exit dalam Driver App" loading="lazy"><p class="qa-img-cap">Skrin rakam waktu masuk (clock-in) dalam app</p></div>` }
         ]
       },
       {
@@ -340,7 +353,8 @@
             <li>Kasut bertutup</li>
           </ul>
           <p>Bagi rider yang ingin membeli kurier bag, sila hubungi agensi masing-masing.</p>
-          <div class="warn-box"><strong>Pakaian tidak sesuai:</strong> Kali pertama &mdash; amaran lisan. Kali kedua ke atas &mdash; surat amaran.</div>` }
+          <div class="warn-box"><strong>Pakaian tidak sesuai:</strong> Kali pertama &mdash; amaran lisan. Kali kedua ke atas &mdash; surat amaran.</div>
+          <div class="qa-img-wrap"><img class="qa-img" src="images/kod-pakaian.jpg" alt="Contoh pakaian kurier yang mematuhi kod pakaian" loading="lazy"><p class="qa-img-cap">Contoh pakaian yang mematuhi kod pakaian</p></div>` }
         ]
       },
       {
